@@ -16,7 +16,7 @@ Scripts are generally intended to be used with array genotyping data in PLINK 1.
 
 Input data should be built to GRCh37 / hg19 reference genome. If you have older data you may be able to lift over to hg19. If you have newer data you will have to modify SNP positions in the scripts manually.
 
-## Type 1 Diabetes (T1D-PRS)##
+## Type 1 Diabetes (T1D-PRS)
 
 We provide scripts to assist with generation of 3 variants of the Exeter T1D-GRS
 

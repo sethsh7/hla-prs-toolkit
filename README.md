@@ -87,24 +87,31 @@ In tutorials a PDF guide to HLA nomenclature is available as background.
 
 ## FAQ
 How do I get from a PLINK direct genotyping file to all of these additional SNPs?
+
 You will need to impute your data, a useful tool for this is the [NIH TOPMED Imputation Server](https://imputation.biodatacatalyst.nhlbi.nih.gov). You will then need to convert your VCF of imputed dosages to PLINK format and extract the variants you need.
 
 Should I imputed to TOPMED or 1000Genomes?
+
 If you are able to impute to TOPMED this will eliminate many issues with missing SNPs. In addition 1000Genomes designs for PRS listed here are less accurate overall.
 
 I am still missing SNPs listed how do I get alternatives?
+
 The best way is to use the [NIH LDProxy tool](https://ldlink.nci.nih.gov/?tab=ldproxy) to look up the next best 1000Genomes proxy SNPs.
 
 My SNPs are badly imputed (INFO<0.8) what should I do?
+
 Use the same tool as above, if you cannot find a good proxy SNP then you may have to exclude this locus.
 
 How do I apply this to my own 23andMe data? 
+
 You will need to download your raw genome data and imputed it via a third party service.
 
 How are missing genotype values handled?
+
 They are set to 0 by default as the algorithm is conservative with calls.
 
 Will this be updated? 
+
 Yes, as time allows (infrequently at present).
 
 ## Supporting Publications

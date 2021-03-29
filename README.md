@@ -64,7 +64,7 @@ a) <prefix>_Scored.txt - List of samples and their corresponding scores as above
 
 To generate a complete PRS (e.g. variants outside the HLA region) you can then sum this component with regular allele scoring generated using PLINK score function.
 
-## SNP Lists
+## SNP Lists (Incomplete)
 A number of scoring and mapping files are provided to utilise in generating scores from their referenced publications. There are versions available generated from SNPs used in the publications (recommended with TOPMED imputed data) or safer proxy SNPs that are more likely to be presented in all data (recommended with 1000Genomes or similar imputation).
 ### Type 1 Diabetes (T1D-PRS)
 10-SNP / 30-SNP score ("GRS1") [1]
@@ -74,9 +74,9 @@ A number of scoring and mapping files are provided to utilise in generating scor
 ### Coeliac Disease (CD-PRS)
 42-SNP score [3]
 
-## Example with Demo data.
+## Example with Demo data (Incomplete)
 
-## FAQ
+## FAQ (Incomplete)
 
 
 ## Supporting Publications

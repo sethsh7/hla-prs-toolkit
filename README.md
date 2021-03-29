@@ -14,7 +14,7 @@ All scripts are designed to be run from a bash or compatible shell environment.
 
 [PLINK genotyping data](https://www.cog-genomics.org/plink/1.9/formats) (.bed/.bim/.fam)
 
-## How to download
+## Download
 Use "git clone https://github.com/sethsh7/hla-prs-toolkit.git" to download a copy onto your working local directory or server.
 
 Alternatively on the main page click "Code" and "Download Zip" then extract the files to your working directory.
@@ -80,7 +80,13 @@ A number of scoring and mapping files are provided to utilise in generating scor
 ### Coeliac Disease (CD-PRS)
 42-SNP score [3] - 42 SNP Exeter score, interaction model only consisting of DQ2.5, DQ2.2, DQ8.1 and DQ2.2 haplotypes.
 
-## Example with Demo data (tbc)
+## Example with Demo Data
+In the scripts folder a subfolder "Demo" contains randomly generated data on 50 samples. You can run this code with either Run.sh or the following commands:
+```
+python 1_plink2call.py --bfile demo/demo_cohort --mapping demo/mapping.txt 
+python 2_cat2scores.py --cat demo/demo_cohort_cat.txt --score demo/scorefile.txt
+```
+If all is succesful these scripts will terminate without error and you will have the output files as described above.
 
 ## Additional files
 In tutorials a PDF guide to HLA nomenclature is available as background.

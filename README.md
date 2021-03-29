@@ -4,7 +4,7 @@
 
 This toolkit contains a collection of scripts for generating Single Nucleotide Polymorphism (SNP) based Polygenic Risk Scores (PRS) for common polygenic disease / traits where Human Leukocyte Antigen (HLA) region epistasis (gene vs gene interaction) is modelled using SNPs in strong Linkage Disequilbrium with alleles.
 
-The major advantage of this is the ability to call HLA alleles using SNPs alone which is signifiantly more cost and time effective in practice than alternative methods such SNP-chip imputation and HLA typing. Demo data and guide files are provided for our own published PRS but these could be easily generated in order to apply code to your own HLA calling and or scoring schema.
+The major advantage of this is the ability to call HLA haplogenotypes (e.g DR3/DQ2.5) using SNPs alone which is signifiantly more cost and time effective in practice than alternative methods such SNP-chip imputation and HLA typing. Demo data and guide files are provided for our own published PRS but these could be easily generated in order to apply code to your own HLA calling and or scoring schema.
 
 This work is a collective effort from researchers at the University of Exeter and elsewhere, please see references to corresponding publications below. For any questions about code on this page please contact Seth Sharp by email (s.sharp@exeter.ac.uk). For any questions about the individual PRS included please contact the corresponding author of the relevant publication cited.
 

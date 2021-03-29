@@ -20,8 +20,11 @@ PLINK genotyping data (.bed/.bim/.fam)
 python 1_plink2call.py --bfile <prefix> --mapping <mapping> 
 ```
 This script takes your PLINK data containing a set of SNPs for which you wish to generate HLA haplogenotypes and a mapping (delimited with either tabs or spaces) and calls PLINK in order to generate the following files:
+
 a) <prefix>_clean.txt - A table of allele counts by sample and mapped allele.
+  
 b) <prefix>_count.txt - Row wise sum of alleles per person for quality control.
+  
 c) <prefix>_cat.txt - List of categorical haplogenotypes by sample.
   
 ```

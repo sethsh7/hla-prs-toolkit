@@ -10,42 +10,28 @@ All scripts are designed to be run from a bash or compatible shell environment.
 
 PLINK 1.9 is required.
 
-Anaconda (Tested Python 3.8 as of 10/9/2020).
+Python / Anaconda (Tested Python 3.8).
 
-Scripts are generally intended to be used with array genotyping data in PLINK 1.9 (BED/BIM/FAM) hard calls format OR Oxford (BGEN/SAMPLE) imputed dosages. If your files are in VCF format you will need to convert them.
+PLINK genotyping data.
 
-Input data should be built to GRCh37 / hg19 reference genome. If you have older data you may be able to lift over to hg19. If you have newer data you will have to modify SNP positions in the scripts manually.
+## 1. PLINK2CALL - Hard calling of HLA haplogenotypes from SNP proxies 
 
-## Type 1 Diabetes (T1D-PRS)
 
-We provide scripts to assist with generation of 3 variants of the Exeter T1D-GRS
+## 2. CAT2SCORES - Assign scores to samples by HLA haplogenotype
+
+## SNP Lists - Assign scores to samples by HLA haplogenotype
+
+### Type 1 Diabetes (T1D-PRS)
 
 10-SNP / 30-SNP score ("GRS1") [1]
-
-Original variant of the score intended for either direct genotyping or limited chip data (10/30 SNP versions available)
-
-Ensure all variants are present and on positive strand
-Run GEN_GRS1.py targeting your PLINK data prefix, specify score version (10 or 30 SNP)
-py GEN_GRS1.py --prefix <mydata> --version 10
-
-If input is correct sample IDs and corresponding scores will print to stdout
 67-SNP score ("GRS2") [2]
 
-Largest and most discriminative score containing complex HLA interaction modelling, designed for use with imputed array data.
-
-To be added at a later date.
-## Coeliac Disease (CD-PRS)
-
-We provide scripts to assist with generation of our CD-GRS.
-
+### Coeliac Disease (CD-PRS)
 42-SNP score [3]
-
 Recently published score containing the majority of GWAS significant polygenic variants and a HLA interaction model for the most common risk haplotypes.
 
 To be added at a later date.
-## Verifying Results
-
-Below demonstrates how to verify your results are correct in the publicly available 1000 Genomes phase 3 genotyping data which we provide in both PLINK hard calls and Oxford imputed format.
+## Example with Demo data.
 
 ## Supporting Publications
 

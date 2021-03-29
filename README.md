@@ -68,6 +68,7 @@ To generate a complete PRS (e.g. variants outside the HLA region) you can then s
 A number of scoring and mapping files are provided to utilise in generating scores from their referenced publications. There are versions available generated from SNPs used in the publications (recommended with TOPMED imputed data) or safer proxy SNPs that are more likely to be presented in all data (recommended with 1000Genomes or similar imputation).
 ### Type 1 Diabetes (T1D-PRS)
 10-SNP / 30-SNP score ("GRS1") [1]
+
 67-SNP score ("GRS2") [2]
 
 ### Coeliac Disease (CD-PRS)

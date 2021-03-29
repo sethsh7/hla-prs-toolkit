@@ -16,7 +16,8 @@ PLINK genotyping data (.bed/.bim/.fam)
 
 ## How to download
 Use "git clone https://github.com/sethsh7/hla-prs-toolkit.git" to download a copy onto your working local directory or server.
-Alternatively on the main page click "Code" and "Download Zip" then extract the files to your working directory..
+
+Alternatively on the main page click "Code" and "Download Zip" then extract the files to your working directory.
 
 ## Scripts
 ### 1. PLINK2CALL - Hard calling of HLA haplogenotypes from SNP proxies

@@ -16,6 +16,7 @@ PLINK genotyping data (.bed/.bim/.fam)
 
 ## Scripts
 ### 1. PLINK2CALL - Hard calling of HLA haplogenotypes from SNP proxies
+#### Usage
 ```
 python 1_plink2call.py --bfile <prefix> --mapping <mapping> 
 ```
@@ -35,6 +36,9 @@ snp3 allele3
 ...
 ```
 The SNPs are matched on RSID and should match *exactly* with your PLINK .bim file.
+
+#### Filtering
+If your SNPs
 
 ### 2. CAT2SCORES - Assign scores to samples by HLA haplogenotype
 

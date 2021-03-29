@@ -15,7 +15,7 @@ All scripts are designed to be run from a bash or compatible shell environment.
 [PLINK genotyping data](https://www.cog-genomics.org/plink/1.9/formats) (.bed/.bim/.fam)
 
 ## Download
-Download [hla-prs-toolkit.zip](https://github.com/sethsh7/hla-prs-toolkit/releases/download/0.1-beta/hla-prs-toolkit.zip)
+[hla-prs-toolkit.zip](https://github.com/sethsh7/hla-prs-toolkit/releases/download/0.1-beta/hla-prs-toolkit.zip) - Latest version of all scripts and demo data.
 
 Alternatively "git clone https://github.com/sethsh7/hla-prs-toolkit.git" to clone onto your working local directory or server.
 

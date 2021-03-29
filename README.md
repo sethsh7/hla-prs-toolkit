@@ -8,9 +8,9 @@ This page contains a collection of scripts and tools along with an explanation o
 
 All scripts are designed to be run from a bash or compatible shell environment.
 
-PLINK 1.9 is required.
+[PLINK 1.9](https://www.cog-genomics.org/plink/1.9/) is required.
 
-Python / Anaconda (Tested Python 3.8).
+[Python / Anaconda](https://www.anaconda.com) (Version 3.8).
 
 PLINK genotyping data (.bed/.bim/.fam)
 

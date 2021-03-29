@@ -13,11 +13,10 @@ PLINK 1.9 is required.
 Python / Anaconda (Tested Python 3.8).
 
 PLINK genotyping data.
+## Scripts
+### 1. PLINK2CALL - Hard calling of HLA haplogenotypes from SNP proxies 
 
-## 1. PLINK2CALL - Hard calling of HLA haplogenotypes from SNP proxies 
-
-
-## 2. CAT2SCORES - Assign scores to samples by HLA haplogenotype
+### 2. CAT2SCORES - Assign scores to samples by HLA haplogenotype
 
 ## SNP Lists - Assign scores to samples by HLA haplogenotype
 

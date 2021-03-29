@@ -38,9 +38,7 @@ snp3 allele3
 The SNPs are matched on RSID and should match *exactly* with your PLINK .bim file.
 
 #### Filtering:
-Since only 2 calls are possible per person (corresponding to 2 chromosomes) any samples with >2 calls will be filtered out in the same way missing genotypes are filtered.
-
-WIP - Implementing a custom allele prioritisation number system to eliminate excess SNP calls on a probabilistic basis.
+Since only 2 calls are possible per person (corresponding to 2 chromosomes) any samples with >2 calls will be filtered out in the same way missing genotypes are filtered. Work in progress - Implementing a custom allele prioritisation number system to eliminate excess SNP calls on a probabilistic basis.
 
 ### 2. CAT2SCORES - Assign scores to samples by HLA haplogenotype
 

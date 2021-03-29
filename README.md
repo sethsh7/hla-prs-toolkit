@@ -10,9 +10,9 @@ All scripts are designed to be run from a bash or compatible shell environment.
 
 [PLINK 1.9](https://www.cog-genomics.org/plink/1.9/) is required.
 
-Python/[Anaconda](https://www.anaconda.com) (Version 3.8).
+[Anaconda](https://www.anaconda.com) or Python (Version 3.8).
 
-PLINK genotyping data (.bed/.bim/.fam)
+[PLINK genotyping data](https://www.cog-genomics.org/plink/1.9/formats) (.bed/.bim/.fam)
 
 ## How to download
 Use "git clone https://github.com/sethsh7/hla-prs-toolkit.git" to download a copy onto your working local directory or server.
@@ -71,6 +71,7 @@ To generate a complete PRS (e.g. variants outside the HLA region) you can then s
 
 ## SNP Lists
 A number of scoring and mapping files are provided to utilise in generating scores from their referenced publications. There are versions available generated from SNPs used in the publications (recommended with TOPMED imputed data) or safer proxy SNPs that are more likely to be presented in all data (recommended with 1000Genomes or similar imputation).
+
 ### Type 1 Diabetes (T1D-PRS)
 10-SNP / 30-SNP score ("GRS1") [1] - Original 10 and 30 SNP Exeter scores, they use a simple interaction model for DR3 and DR4 haplotypes.
 
@@ -81,8 +82,30 @@ A number of scoring and mapping files are provided to utilise in generating scor
 
 ## Example with Demo data (tbc)
 
-## FAQ (tbc)
+## Additional files
+In tutorials a PDF guide to HLA nomenclature is available as background.
 
+## FAQ
+How do I get from a PLINK direct genotyping file to all of these additional SNPs?
+You will need to impute your data, a useful tool for this is the [NIH TOPMED Imputation Server](https://imputation.biodatacatalyst.nhlbi.nih.gov). You will then need to convert your VCF of imputed dosages to PLINK format and extract the variants you need.
+
+Should I imputed to TOPMED or 1000Genomes?
+If you are able to impute to TOPMED this will eliminate many issues with missing SNPs. In addition 1000Genomes designs for PRS listed here are less accurate overall.
+
+I am still missing SNPs listed how do I get alternatives?
+The best way is to use the [NIH LDProxy tool](https://ldlink.nci.nih.gov/?tab=ldproxy) to look up the next best 1000Genomes proxy SNPs.
+
+My SNPs are badly imputed (INFO<0.8) what should I do?
+Use the same tool as above, if you cannot find a good proxy SNP then you may have to exclude this locus.
+
+How do I apply this to my own 23andMe data? 
+You will need to download your raw genome data and imputed it via a third party service.
+
+How are missing genotype values handled?
+They are set to 0 by default as the algorithm is conservative with calls.
+
+Will this be updated? 
+Yes, as time allows (infrequently at present).
 
 ## Supporting Publications
 

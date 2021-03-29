@@ -14,6 +14,9 @@ Python / Anaconda (Tested Python 3.8).
 
 PLINK genotyping data (.bed/.bim/.fam)
 
+## How to download
+Use "git clone https://github.com/sethsh7/hla-prs-toolkit.git" to download a copy onto your local working server or directory.
+
 ## Scripts
 ### 1. PLINK2CALL - Hard calling of HLA haplogenotypes from SNP proxies
 #### Usage:

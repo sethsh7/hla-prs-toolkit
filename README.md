@@ -119,11 +119,11 @@ Yes, as time allows (infrequently at present).
 
 ## Supporting Publications
 
-[1] A Type 1 Diabetes Genetic Risk Score Can Aid Discrimination Between Type 1 and Type 2 Diabetes in Young Adults, DiabetesCare 2016, RA Oram et al
+[1] *"A Type 1 Diabetes Genetic Risk Score Can Aid Discrimination Between Type 1 and Type 2 Diabetes in Young Adults"*, DiabetesCare 2016, RA Oram et al
 
-[2] Development and Standardization of an Improved Type 1 Diabetes Genetic Risk Score for Use in Newborn Screening and Incident Diagnosis, DiabetesCare 2019, SA Sharp et al
+[2] *"Development and Standardization of an Improved Type 1 Diabetes Genetic Risk Score for Use in Newborn Screening and Incident Diagnosis"*, DiabetesCare 2019, SA Sharp et al
 
-[3] A single nucleotide polymorphism genetic risk score to aid diagnosis of coeliac disease: a pilot study in clinical care, AP&T 2020, SA Sharp et al
+[3] *"A single nucleotide polymorphism genetic risk score to aid diagnosis of coeliac disease: a pilot study in clinical care"*, AP&T 2020, SA Sharp et al
 
 ## License
 

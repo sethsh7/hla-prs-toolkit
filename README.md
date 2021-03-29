@@ -18,7 +18,7 @@ PLINK genotyping data.
 
 ### 2. CAT2SCORES - Assign scores to samples by HLA haplogenotype
 
-## SNP Lists - Assign scores to samples by HLA haplogenotype
+## SNP Lists
 
 ### Type 1 Diabetes (T1D-PRS)
 

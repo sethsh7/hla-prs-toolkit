@@ -1,6 +1,6 @@
 # Polygenic Risk Score (PRS) Toolkit for HLA
 
-### Please note the terms Polygenic Risk Score (PRS) and Genetic Risk Score (GRS) are used interchangeably dependent on audience.
+### Please note the terms Polygenic Risk Score (PRS) and Genetic Risk Score (GRS) are used interchangeably.
 
 This page contains a collection of scripts and tools along with an explanation on published Single Nucleotide Polymorphism (SNP) based Polygenic Risk Scores (PRS) for common polygenic disease / traits where Human Leukocyte Antigen (HLA) region epistasis (gene vs gene interaction) is modelled. Additionally, we provide instructions and resources in order to verify your own scripts in the publicly available 1000 Genomes data. This work is a collective effort from researchers at the University of Exeter and elsewhere, please see references to corresponding publications below. For any questions about code on this page please contact Seth Sharp by email (s.sharp@exeter.ac.uk). For any questions about the individual PRS utilised here please contact the corresponding author of the relevant publication cited.
 

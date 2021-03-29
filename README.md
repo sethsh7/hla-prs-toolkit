@@ -69,19 +69,19 @@ a) <prefix>_Scored.txt - List of samples and their corresponding scores as above
 
 To generate a complete PRS (e.g. variants outside the HLA region) you can then sum this component with regular allele scoring generated using PLINK score function.
 
-## SNP Lists (Incomplete)
+## SNP Lists
 A number of scoring and mapping files are provided to utilise in generating scores from their referenced publications. There are versions available generated from SNPs used in the publications (recommended with TOPMED imputed data) or safer proxy SNPs that are more likely to be presented in all data (recommended with 1000Genomes or similar imputation).
 ### Type 1 Diabetes (T1D-PRS)
-10-SNP / 30-SNP score ("GRS1") [1]
+10-SNP / 30-SNP score ("GRS1") [1] - Original 10 and 30 SNP Exeter scores, they use a simple interaction model for DR3 and DR4 haplotypes.
 
-67-SNP score ("GRS2") [2]
+67-SNP score ("GRS2") [2] - Updated 67 SNP Exeter score, complex interaction model, combines interaction and additive models (as described above), best prediction.
 
 ### Coeliac Disease (CD-PRS)
-42-SNP score [3]
+42-SNP score [3] - 42 SNP Exeter score, interaction model only consisting of DQ2.5, DQ2.2, DQ8.1 and DQ2.2 haplotypes.
 
-## Example with Demo data (Incomplete)
+## Example with Demo data (tbc)
 
-## FAQ (Incomplete)
+## FAQ (tbc)
 
 
 ## Supporting Publications

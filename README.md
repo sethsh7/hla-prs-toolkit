@@ -57,4 +57,4 @@ Below demonstrates how to verify your results are correct in the publicly availa
 
 ## License
 
-Resources are provided under the GNU General Public License v3.0. For more information please see the LICENCE file.
+Resources are provided under the GNU General Public License v3.0. For more information please LICENCE.

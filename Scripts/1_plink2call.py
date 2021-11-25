@@ -27,7 +27,7 @@ def main(docopt_args):
 	mapping=docopt_args["<mapping>"]
 
 	#PLINK Location
-	plink="/gpfs/mrc0/projects/Research_Project-MRC158833/programs/plink/plink --silent"
+	plink="plink --silent"
 
 	#Generate frequencies
 	print("Generating frequencies with PLINK...")
@@ -36,9 +36,18 @@ def main(docopt_args):
 	freq=pd.read_csv(bfile+".frq",header=0, delim_whitespace=True)
 	ma=freq[["SNP","A1"]]
 
+
 	#Append MAF and tagged allele to SNP matrix
 	print("Matching SNP allele to HLA allele...")
 	tags=pd.read_csv(mapping, header=0, sep="\s+|\t+|\s+\t+|\t+\s+", engine='python')
+	
+	# TODO add extraction
+	if len(ma) != len(tags):
+		raise ValueError("Number of rows of bfile does not equal to the number of rows of mapping file.")
+	
+	if tags.columns[1] != "allele" and tags.columns[0] != "SNP":
+		raise ValueError("Error: the first column needs to be named SNP and second column named ALLELE. CAPS matters")
+
 	vmap=pd.merge(ma,tags)
 
 	#Use plink score function to generate a table of allele dosages	

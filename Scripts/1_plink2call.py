@@ -41,11 +41,10 @@ def main(docopt_args):
 	print("Matching SNP allele to HLA allele...")
 	tags=pd.read_csv(mapping, header=0, sep="\s+|\t+|\s+\t+|\t+\s+", engine='python')
 	
-	# TODO add extraction
+	#Extra checks added by TL and modified
 	if len(ma) != len(tags):
 		raise ValueError("Number of rows of bfile does not equal to the number of rows of mapping file.")
-	
-	if tags.columns[1] != "allele" and tags.columns[0] != "SNP":
+	if ("ALLELE" not in tags) and ("SNP" not in tags):
 		raise ValueError("Error: the first column needs to be named SNP and second column named ALLELE. CAPS matters")
 
 	vmap=pd.merge(ma,tags)

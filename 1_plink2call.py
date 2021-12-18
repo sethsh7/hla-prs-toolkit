@@ -65,7 +65,14 @@ def genDosageTable(vmap, bfile, mapping):
 	subprocess.run(command,shell=True)
 	return table_hla
 
-#Sum rows and check
+#Sum dosage row counts
+def sumRows(dosages):
+	count=dosages.copy()
+	count['COUNT']=dosages.iloc[:,3:].sum(axis=1).to_frame()
+	count=count[['FID','IID','COUNT']]
+	return count
+
+#Conversion to categorical HLA types and LD-tiebreak
 def toCategorical(table_dosage, rank):
 	table_cat=table_dosage[['FID','IID']].copy()
 	table_cat['GENO1']="X"
@@ -127,13 +134,19 @@ def main(docopt_args):
 	mapping=docopt_args["<mapping>"]
 	rank=docopt_args["<ranking>"]
 
+	#Load in and convert to dosages and out
 	vmap=genSnpMatrix(bfile,mapping)
-	dosage=genDosageTable(vmap,bfile,mapping)
-	hla=toCategorical(dosage,rank)
+	dosages=genDosageTable(vmap,bfile,mapping)
+	dosages.to_csv(bfile+"_Dosages.txt", header=True, index=False, sep="\t")
 	
-	#Output result
-	hla.to_csv(bfile+"_cat.txt", header=True, index=False, sep="\t")
-	print("Success! Created "+bfile+"_cat.txt")
+	#Generate allele counts by sample and out
+	cnt=sumRows(dosages)
+	cnt.to_csv(bfile+"_Counts.txt", header=True, index=False, sep="\t")
+
+	#Generate the categorical HLA types and out
+	hla=toCategorical(dosages,rank)
+	hla.to_csv(bfile+"_Categorical.txt", header=True, index=False, sep="\t")
+	print("Finished.")
 
 
 if __name__ == "__main__":

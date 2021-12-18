@@ -9,6 +9,7 @@ The major advantage of this is the ability to call HLA haplogenotypes (e.g DR3/D
 This work is a collective effort from researchers at the University of Exeter and elsewhere, please see references to corresponding publications below. For any questions about code on this page please contact Seth Sharp by email (s.sharp@exeter.ac.uk). For any questions about the individual PRS included please contact the corresponding author of the relevant publication cited.
 
 ## Updates
+18/12/2021 - TOPMED references are changed to HRC+TOPMED as it has become apparent not all listed variants are available in TOPMED.
 18/12/2021 - A bug fix update was applied - [Notes](https://github.com/sethsh7/hla-prs-toolkit/pull/11)
 
 ## Requirements
@@ -77,7 +78,7 @@ a) <prefix>_Scored.txt - List of samples and their corresponding scores as above
 To generate a complete PRS (e.g. variants outside the HLA region) you can then sum this component with regular allele scoring generated using PLINK score function.
 
 ## SNP Lists
-A number of scoring and mapping files are provided to utilise in generating scores from their referenced publications. There are versions available generated from SNPs used in the publications (recommended with TOPMED imputed data) or safer proxy SNPs that are more likely to be presented in all data (recommended with 1000Genomes or similar imputation).
+A number of scoring and mapping files are provided to utilise in generating scores from their referenced publications. There are versions available generated from SNPs used in the publications (recommended with HRC+TOPMED imputed data) or safer proxy SNPs that are more likely to be presented in all data (recommended with 1000Genomes or similar imputation).
 
 #### Type 1 Diabetes (T1D-PRS)
 10-SNP / 30-SNP score ("GRS1") [1] - Original 10 and 30 SNP Exeter scores, they use a simple interaction model for DR3 and DR4 haplotypes.
@@ -100,10 +101,10 @@ In tutorials a PDF guide to HLA nomenclature is available as background.
 
 ## FAQ
 #### How do I get from a PLINK direct genotyping file to all of these additional SNPs?
-You will need to impute your data, a useful tool for this is the [NIH TOPMED Imputation Server](https://imputation.biodatacatalyst.nhlbi.nih.gov). You will then need to convert your VCF of imputed dosages to PLINK format and extract the variants you need.
+You will need to impute your data, a useful tool for this is the [NIH Imputation Server](https://imputation.biodatacatalyst.nhlbi.nih.gov). You will then need to convert your VCF of imputed dosages to PLINK format and extract the variants you need.
 
-#### Should I impute to TOPMED or 1000Genomes?
-If you are able to impute to TOPMED this will eliminate many issues with missing SNPs. In addition 1000Genomes designs for PRS listed here are less accurate overall.
+#### Should I impute to HRC, TOPMED or 1000Genomes?
+If you are able to impute to HRC and TOPMED this will eliminate many issues with missing SNPs. In addition 1000Genomes designs for PRS listed here are less accurate overall.
 
 #### I am still missing SNPs listed how do I get alternatives?
 The best way is to use the [NIH LDProxy tool](https://ldlink.nci.nih.gov/?tab=ldproxy) to look up the next best 1000Genomes proxy SNPs.

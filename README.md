@@ -9,8 +9,7 @@ The major advantage of this is the ability to call HLA haplogenotypes (e.g DR3/D
 This work is a collective effort from researchers at the University of Exeter and elsewhere, please see references to corresponding publications below. For any questions about code on this page please contact Seth Sharp by email (s.sharp@exeter.ac.uk). For any questions about the individual PRS included please contact the corresponding author of the relevant publication cited.
 
 ## Update - December 2021
-A bug fix update was applied
-https://github.com/sethsh7/hla-prs-toolkit/pull/11
+A bug fix update was applied - [Notes](https://github.com/sethsh7/hla-prs-toolkit/pull/11)
 
 ## Requirements
 

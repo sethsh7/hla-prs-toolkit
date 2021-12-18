@@ -10,6 +10,7 @@ This work is a collective effort from researchers at the University of Exeter an
 
 ## Updates
 18/12/2021 - TOPMED references are changed to HRC+TOPMED as it has become apparent not all listed variants are available in TOPMED.
+
 18/12/2021 - A bug fix update was applied - [Notes](https://github.com/sethsh7/hla-prs-toolkit/pull/11)
 
 ## Requirements

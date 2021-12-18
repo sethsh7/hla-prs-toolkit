@@ -101,8 +101,7 @@ A number of scoring and mapping files are provided to utilise in generating scor
 42-SNP score [3] - 42 SNP Exeter score, interaction model only consisting of DQ2.5, DQ2.2, DQ8.1 and DQ2.2 haplotypes.
 
 ## Example with Demo Data
-In the scripts folder a subfolder "Demo" contains randomly generated data on 50 samples.\
-You can run this code with either RunDemo.sh
+In the scripts folder a subfolder "Demo" contains randomly generated data on 50 samples. Run with RunDemo.sh.
 
 ## FAQ
 #### How do I get from a PLINK direct genotyping file to all of these additional SNPs?

@@ -9,7 +9,7 @@ The major advantage of this is the ability to call HLA haplogenotypes (e.g DR3/D
 This work is a collective effort from researchers at the University of Exeter and elsewhere, please see references to corresponding publications below. For any questions about code on this page please contact Seth Sharp by email (s.sharp@exeter.ac.uk). For any questions about the individual PRS included please contact the corresponding author of the relevant publication cited.
 
 ## Updates
-19/12/2021 - NEW: Additiona of HLA LD-Tiebreak algorithm absed on reference ranking (see updated instructions below) [Notes](https://github.com/sethsh7/hla-prs-toolkit/pull/12)
+19/12/2021 - NEW: Addition of HLA LD-Tiebreak algorithm based on reference ranking (see updated instructions below) [Notes](https://github.com/sethsh7/hla-prs-toolkit/pull/12)
 
 18/12/2021 - TOPMED references are changed to HRC+TOPMED as it has become apparent not all listed variants are available in TOPMED.
 
@@ -34,7 +34,7 @@ Alternatively "git clone https://github.com/sethsh7/hla-prs-toolkit.git" to clon
 ### 1. PLINK2CALL - Hard calling of HLA haplogenotypes from SNP proxies
 #### Usage:
 ```
-python 1_plink2call.py --bfile <prefix> --mapping <mapping> 
+python 1_plink2call.py --bfile <prefix> --mapping <mapping> --rank <ranking>
 ```
 This script takes your PLINK data containing a set of SNPs for which you wish to generate HLA haplogenotypes and a mapping file which should be text (space or tab delimited) in the format:
 ```
@@ -52,9 +52,23 @@ a) <prefix>_clean.txt - A table of allele counts by sample and mapped allele.
 b) <prefix>_count.txt - Row wise sum of alleles per person for quality control.
 c) <prefix>_cat.txt - List of categorical haplogenotypes by sample.
 ```
+Additionally a ranking file is now needed to resolve impossible calls and invoke the HLA-LD tiebreak algorithm (see below).
+```
 
-#### Filtering:
-Since only 2 calls are possible per person (corresponding to 2 chromosomes) any samples with >2 calls will be filtered out in the same way missing genotypes are filtered. Work in progress - Implementing a custom allele prioritisation number system to eliminate excess SNP calls on a probabilistic basis.
+#### HLA LD-Tiebreak algorithm (new December 2021)
+Since only 2 HLA calls are possible per person (corresponding to 2 chromosomes) any samples with >2 calls were previously filtered out. This is no longer the case as an (unpublished) HLA LD-Tiebreak algorithm as been added based on a reference ranking. The reference ranking provided has been calculated based on the following:
+
+Ranking score = SNP LD (r2) * Prior odds (frequency in reference population)
+
+The reference prior odds were generated from HLA typing data take from [Klitz et al (2003)](https://pubmed.ncbi.nlm.nih.gov/12974796/) and are therefore appropriate for a White US (European ancestry) population. This scenario typically occurs either in genotyping miscalls or in non-European ancestry samples.You can generate your own reference if you have other ethnicity data from any published HLA typing database. Our internal data shows ~72% of calls recovered this way are accurate compared to HLA typing. 
+
+The ranking file provided must have the following format:
+```
+ALELE RANK
+allele1 1
+allele2 2
+allele3 3
+...
 
 ### 2. CAT2SCORES - Assign scores to samples by HLA haplogenotype
 #### Usage:
@@ -92,22 +106,15 @@ A number of scoring and mapping files are provided to utilise in generating scor
 42-SNP score [3] - 42 SNP Exeter score, interaction model only consisting of DQ2.5, DQ2.2, DQ8.1 and DQ2.2 haplotypes.
 
 ## Example with Demo Data
-In the scripts folder a subfolder "Demo" contains randomly generated data on 50 samples. You can run this code with either Run.sh or the following commands:
-```
-python 1_plink2call.py --bfile demo/demo_cohort --mapping demo/mapping.txt 
-python 2_cat2scores.py --cat demo/demo_cohort_cat.txt --score demo/scorefile.txt
-```
-If all is succesful these scripts will terminate without error and you will have the output files as described above.
-
-## Additional files
-In tutorials a PDF guide to HLA nomenclature is available as background.
+In the scripts folder a subfolder "Demo" contains randomly generated data on 50 samples.\
+You can run this code with either RunDemo.sh
 
 ## FAQ
 #### How do I get from a PLINK direct genotyping file to all of these additional SNPs?
 You will need to impute your data, a useful tool for this is the [NIH Imputation Server](https://imputation.biodatacatalyst.nhlbi.nih.gov). You will then need to convert your VCF of imputed dosages to PLINK format and extract the variants you need.
 
 #### Should I impute to HRC, TOPMED or 1000Genomes?
-If you are able to impute to HRC and TOPMED this will eliminate many issues with missing SNPs. In addition 1000Genomes designs for PRS listed here are less accurate overall.
+If you are able to impute to HRC and TOPMED and combine the data this will eliminate many issues with missing SNPs and may provide more accurate HLA calls.
 
 #### I am still missing SNPs listed how do I get alternatives?
 The best way is to use the [NIH LDProxy tool](https://ldlink.nci.nih.gov/?tab=ldproxy) to look up the next best 1000Genomes proxy SNPs.
@@ -116,13 +123,10 @@ The best way is to use the [NIH LDProxy tool](https://ldlink.nci.nih.gov/?tab=ld
 Use the same tool as above, if you cannot find a good proxy SNP then you may have to exclude this locus.
 
 #### How do I apply this to my own 23andMe data? 
-You will need to download your raw genome data and imputed it via a third party service.
+You will need to download your raw genome data and impute it via a third party service.
 
 #### How are missing genotype values handled?
 They are set to 0 by default as the algorithm is conservative with calls.
-
-#### Will this be updated? 
-Yes, as time allows (infrequently at present).
 
 ## Supporting Publications
 

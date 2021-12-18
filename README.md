@@ -19,10 +19,8 @@ This work is a collective effort from researchers at the University of Exeter an
 
 All scripts are designed to be run from a bash or compatible shell environment.
 
-[PLINK 1.9](https://www.cog-genomics.org/plink/1.9/) is required.
-
-[Anaconda](https://www.anaconda.com) or Python (Version 3.8).
-
+[PLINK 1.9](https://www.cog-genomics.org/plink/1.9/) is required.\
+[Anaconda](https://www.anaconda.com) or Python (Version 3.8).\
 [PLINK genotyping data](https://www.cog-genomics.org/plink/1.9/formats) (.bed/.bim/.fam)
 
 ## Download

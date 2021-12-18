@@ -50,9 +50,7 @@ b) <prefix>_count.txt - Row wise sum of alleles per person for quality control.
 c) <prefix>_cat.txt - List of categorical haplogenotypes by sample.
 ```
 Additionally a ranking file is now needed to resolve impossible calls and invoke the HLA-LD tiebreak algorithm (see below).
-```
-
-#### HLA LD-Tiebreak algorithm (new December 2021)
+### HLA LD-Tiebreak algorithm (new December 2021)
 Since only 2 HLA calls are possible per person (corresponding to 2 chromosomes) any samples with >2 calls were previously filtered out. This is no longer the case as an (unpublished) HLA LD-Tiebreak algorithm as been added based on a reference ranking. The reference ranking provided has been calculated based on the following:
 
 Ranking score = SNP LD (r2) * Prior odds (frequency in reference population)

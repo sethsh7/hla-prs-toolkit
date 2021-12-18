@@ -9,7 +9,7 @@ The major advantage of this is the ability to call HLA haplogenotypes (e.g DR3/D
 This work is a collective effort from researchers at the University of Exeter and elsewhere, please see references to corresponding publications below. For any questions about code on this page please contact Seth Sharp by email (s.sharp@exeter.ac.uk). For any questions about the individual PRS included please contact the corresponding author of the relevant publication cited.
 
 ## Updates
-19/12/2021 - Release 0.2-beta (link below)
+19/12/2021 - Release 0.2-beta (link below)\
 19/12/2021 - NEW: Addition of HLA LD-Tiebreak algorithm based on reference ranking (see updated instructions below) [Notes](https://github.com/sethsh7/hla-prs-toolkit/pull/12)\
 18/12/2021 - TOPMED references are changed to HRC+TOPMED as it has become apparent not all listed variants are available in TOPMED.\
 18/12/2021 - A bug fix update was applied - [Notes](https://github.com/sethsh7/hla-prs-toolkit/pull/11)

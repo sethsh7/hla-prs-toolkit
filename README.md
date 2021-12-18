@@ -64,7 +64,7 @@ allele1 1
 allele2 2
 allele3 3
 ...
-
+```
 ### 2. CAT2SCORES - Assign scores to samples by HLA haplogenotype
 #### Usage:
 ```

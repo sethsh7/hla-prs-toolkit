@@ -10,7 +10,7 @@ This work is a collective effort from researchers at the University of Exeter an
 
 ## Updates
 19/12/2021 - ****Release 0.21-beta (link below)****\
-19/12/2021 - Spreadsheet enhancements and minor bugfixes\
+19/12/2021 - Spreadsheet enhancements and minor bugfixes [Notes](https://github.com/sethsh7/hla-prs-toolkit/pull/13)\
 19/12/2021 - Release 0.2-beta\
 19/12/2021 - NEW: Addition of HLA LD-Tiebreak algorithm based on reference ranking (see updated instructions below) [Notes](https://github.com/sethsh7/hla-prs-toolkit/pull/12)\
 18/12/2021 - TOPMED references are changed to HRC+TOPMED as it has become apparent not all listed variants are available in TOPMED.\

@@ -14,17 +14,16 @@ This work is a collective effort from researchers at the University of Exeter an
 18/12/2021 - TOPMED references are changed to HRC+TOPMED as it has become apparent not all listed variants are available in TOPMED.\
 18/12/2021 - A bug fix update was applied - [Notes](https://github.com/sethsh7/hla-prs-toolkit/pull/11)
 
-## Requirements
-
-All scripts are designed to be run from a bash or compatible shell environment.
-
-[PLINK 1.9](https://www.cog-genomics.org/plink/1.9/) is required.\
-[Anaconda](https://www.anaconda.com) or Python (Version 3.8).\
-[PLINK genotyping data](https://www.cog-genomics.org/plink/1.9/formats) (.bed/.bim/.fam)
-
 ## Download
 [hla-prs-toolkit-0.2b.zip](https://github.com/sethsh7/hla-prs-toolkit/releases/download/0.2-beta/hla-prs-toolkit-0.2b.zip) - Latest version of all scripts and demo data.\
 Alternatively "git clone https://github.com/sethsh7/hla-prs-toolkit.git" to clone onto your working local directory or server.
+
+## Requirements
+
+All scripts are designed to be run from a bash or compatible shell environment.
+[PLINK 1.9](https://www.cog-genomics.org/plink/1.9/) is required.\
+[Anaconda](https://www.anaconda.com) or Python (Version 3.8).\
+[PLINK genotyping data](https://www.cog-genomics.org/plink/1.9/formats) (.bed/.bim/.fam)
 
 ## Scripts
 ### 1. PLINK2CALL - Hard calling of HLA haplogenotypes from SNP proxies

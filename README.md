@@ -8,7 +8,9 @@ please see references to corresponding publications below. For any questions abo
 
 ## Updates
 7/8/2022 - Updated the SNP lists for TOPMED (r2) imputations as per NIH TOPMED server
+
 7/8/2022 - Reordered the SNP lists folder to split by TOPMED vs 1000G imputation.
+
 7/8/2022 - Added a wrapper script
 
 ## Download

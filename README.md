@@ -16,8 +16,6 @@ please see references to corresponding publications below. For any questions abo
 Alternatively "git clone https://github.com/sethsh7/hla-prs-toolkit.git" to clone onto your working local directory or server.
 
 ## Requirements
-
-All scripts are designed to be run from a bash or compatible shell environment.
 [PLINK 1.9](https://www.cog-genomics.org/plink/1.9/) is required.\
 [Anaconda](https://www.anaconda.com) or Python (Version 3.8).\
 [PLINK genotyping data](https://www.cog-genomics.org/plink/1.9/formats) (.bed/.bim/.fam)

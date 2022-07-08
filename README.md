@@ -2,7 +2,7 @@
 
 This toolkit is for generating Single Nucleotide Polymorphism (SNP) based Polygenic Risk Scores (PRS) for common polygenic disease / traits where it is necessary to impute HLA alleles using single SNPs and model epistasis.
 
-The major advantage of this is the ability to call HLA haplogenotypes (e.g DR3/DQ2.5) using SNPs alone which is quicker and more cost effective than typical methods such array imputation and HLA typing. Demo data and guide files are provided for our own published PRS but these could be easily generated in order to apply code to your own HLA calling and or scoring schema.
+The major advantage of this is the ability to assign HLA haplogenotypes (e.g DR3/DQ2.5) using SNPs alone which is quicker and more cost effective than typical methods such array imputation and HLA typing. Demo data and guide files are provided for our own published PRS but these could be easily generated in order to apply code to your own HLA calling and or scoring schema.
 
 please see references to corresponding publications below. For any questions about code on this page please contact Seth Sharp by email (Ssharp@stanford.edu).
 

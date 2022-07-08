@@ -100,6 +100,9 @@ In the scripts folder a subfolder "Demo" contains randomly generated data on 50 
 #### I have array genotyping data. How do I get the desired SNPs?
 You will need to impute your data using [NIH Imputation Server](https://imputation.biodatacatalyst.nhlbi.nih.gov). You will then need to convert your VCF of imputed dosages to PLINK format and extract the variants you need.
 
+#### What genome build should my data be in?
+For TOPMED it should be hg38, for 1000G hg19.
+
 #### Should I impute to HRC, TOPMED or 1000Genomes?
 We have provided SNP lists for TOPMED r2 and 1000 Genomes as an alternative.
 

@@ -7,10 +7,8 @@ The major advantage of this is the ability to assign HLA haplogenotypes (e.g DR3
 please see references to corresponding publications below. For any questions about code on this page please contact Seth Sharp by email (Ssharp@stanford.edu).
 
 ## Updates
-7/8/2022 - Updated the SNP lists for TOPMED (r2) imputations as per NIH TOPMED server
-
-7/8/2022 - Reordered the SNP lists folder to split by TOPMED vs 1000G imputation.
-
+7/8/2022 - Updated the SNP lists for TOPMED (r2) imputations as per NIH TOPMED server\
+7/8/2022 - Reordered the SNP lists folder to split by TOPMED vs 1000G imputation\
 7/8/2022 - Added a wrapper script
 
 ## Download

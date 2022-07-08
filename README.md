@@ -9,6 +9,10 @@ The major advantage of this is the ability to call HLA haplogenotypes (e.g DR3/D
 This work is a collective effort from researchers at the University of Exeter and elsewhere, please see references to corresponding publications below. For any questions about code on this page please contact Seth Sharp by email (s.sharp@exeter.ac.uk). For any questions about the individual PRS included please contact the corresponding author of the relevant publication cited.
 
 ## Updates
+7/8/2022 - Updated the SNP lists for TOPMED (r2) imputations as per NIH TOPMED server
+7/8/2022 - Reordered the SNP lists folder to split by TOPMED vs 1000G imputation.
+
+
 19/12/2021 - ****Release 0.21-beta (link below)****\
 19/12/2021 - Spreadsheet enhancements and minor bugfixes [Notes](https://github.com/sethsh7/hla-prs-toolkit/pull/13)\
 19/12/2021 - Release 0.2-beta\

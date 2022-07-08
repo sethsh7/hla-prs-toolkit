@@ -1,24 +1,15 @@
 # Polygenic Risk Score (PRS) Toolkit for HLA
 
-#### Please note the terms Polygenic Risk Score (PRS) and Genetic Risk Score (GRS) are used interchangeably.
+This toolkit is for generating Single Nucleotide Polymorphism (SNP) based Polygenic Risk Scores (PRS) for common polygenic disease / traits where it is necessary to impute HLA alleles using single SNPs and model epistasis.
 
-This toolkit contains a collection of scripts for generating Single Nucleotide Polymorphism (SNP) based Polygenic Risk Scores (PRS) for common polygenic disease / traits where Human Leukocyte Antigen (HLA) region epistasis (gene vs gene interaction) is modelled using SNPs in strong Linkage Disequilbrium with alleles.
+The major advantage of this is the ability to call HLA haplogenotypes (e.g DR3/DQ2.5) using SNPs alone which is quicker and more cost effective than typical methods such array imputation and HLA typing. Demo data and guide files are provided for our own published PRS but these could be easily generated in order to apply code to your own HLA calling and or scoring schema.
 
-The major advantage of this is the ability to call HLA haplogenotypes (e.g DR3/DQ2.5) using SNPs alone which is signifiantly more cost and time effective in practice than alternative methods such SNP-chip imputation and HLA typing. Demo data and guide files are provided for our own published PRS but these could be easily generated in order to apply code to your own HLA calling and or scoring schema.
-
-This work is a collective effort from researchers at the University of Exeter and elsewhere, please see references to corresponding publications below. For any questions about code on this page please contact Seth Sharp by email (s.sharp@exeter.ac.uk). For any questions about the individual PRS included please contact the corresponding author of the relevant publication cited.
+please see references to corresponding publications below. For any questions about code on this page please contact Seth Sharp by email (Ssharp@stanford.edu).
 
 ## Updates
 7/8/2022 - Updated the SNP lists for TOPMED (r2) imputations as per NIH TOPMED server
 7/8/2022 - Reordered the SNP lists folder to split by TOPMED vs 1000G imputation.
-
-
-19/12/2021 - ****Release 0.21-beta (link below)****\
-19/12/2021 - Spreadsheet enhancements and minor bugfixes [Notes](https://github.com/sethsh7/hla-prs-toolkit/pull/13)\
-19/12/2021 - Release 0.2-beta\
-19/12/2021 - NEW: Addition of HLA LD-Tiebreak algorithm based on reference ranking (see updated instructions below) [Notes](https://github.com/sethsh7/hla-prs-toolkit/pull/12)\
-18/12/2021 - TOPMED references are changed to HRC+TOPMED as it has become apparent not all listed variants are available in TOPMED.\
-18/12/2021 - A bug fix update was applied - [Notes](https://github.com/sethsh7/hla-prs-toolkit/pull/11)
+7/8/2022 - Added a wrapper script
 
 ## Download
 [hla-prs-toolkit-0.21b.zip](https://github.com/sethsh7/hla-prs-toolkit/releases/download/0.21-beta/hla-prs-toolkit-0.21b.zip) - Latest version of all scripts and demo data.\
@@ -94,7 +85,7 @@ a) <prefix>_Scored.txt - List of samples and their corresponding scores as above
 To generate a complete PRS (e.g. variants outside the HLA region) you can then sum this component with regular allele scoring generated using PLINK score function.
 
 ## SNP Lists
-A number of scoring and mapping files are provided to utilise in generating scores from their referenced publications. There are versions available generated from SNPs used in the publications (recommended with HRC+TOPMED imputed data) or safer proxy SNPs that are more likely to be presented in all data (recommended with 1000Genomes or similar imputation).
+Scoring and mapping files are provided to generate scores from our publications with either TOPMED or 1000G imputed data.
 
 #### Type 1 Diabetes (T1D-PRS)
 10-SNP / 30-SNP score ("GRS1") [1] - Original 10 and 30 SNP Exeter scores, they use a simple interaction model for DR3 and DR4 haplotypes.
@@ -108,17 +99,11 @@ A number of scoring and mapping files are provided to utilise in generating scor
 In the scripts folder a subfolder "Demo" contains randomly generated data on 50 samples. Run with RunDemo.sh.
 
 ## FAQ
-#### How do I get from a PLINK direct genotyping file to all of these additional SNPs?
-You will need to impute your data, a useful tool for this is the [NIH Imputation Server](https://imputation.biodatacatalyst.nhlbi.nih.gov). You will then need to convert your VCF of imputed dosages to PLINK format and extract the variants you need.
+#### I have array genotyping data. How do I get the desired SNPs?
+You will need to impute your data using [NIH Imputation Server](https://imputation.biodatacatalyst.nhlbi.nih.gov). You will then need to convert your VCF of imputed dosages to PLINK format and extract the variants you need.
 
 #### Should I impute to HRC, TOPMED or 1000Genomes?
-If you are able to impute to HRC and TOPMED and combine the data this will eliminate many issues with missing SNPs and may provide more accurate HLA calls.
-
-#### I am still missing SNPs listed how do I get alternatives?
-The best way is to use the [NIH LDProxy tool](https://ldlink.nci.nih.gov/?tab=ldproxy) to look up the next best 1000Genomes proxy SNPs.
-
-#### My SNPs are badly imputed (INFO<0.8) what should I do?
-Use the same tool as above, if you cannot find a good proxy SNP then you may have to exclude this locus.
+We have provided SNP lists for TOPMED r2 and 1000 Genomes as an alternative.
 
 #### How do I apply this to my own 23andMe data? 
 You will need to download your raw genome data and impute it via a third party service.

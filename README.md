@@ -12,7 +12,7 @@ For any questions about code on this page please contact Seth Sharp by email (Ss
 7/8/2022 - Added a wrapper script
 
 ## Download
-[hla-prs-toolkit-0.21b.zip](https://github.com/sethsh7/hla-prs-toolkit/releases/download/0.21-beta/hla-prs-toolkit-0.21b.zip) - Latest version of all scripts and demo data.\
+[hla-prs-toolkit-0.22a.zip](https://github.com/sethsh7/hla-prs-toolkit/releases/download/0.22-a/hla-prs-toolkit-0.22a.zip) - Latest version of all scripts and demo data.\
 Alternatively "git clone https://github.com/sethsh7/hla-prs-toolkit.git" to clone onto your working local directory or server.
 
 ## Requirements

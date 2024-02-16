@@ -27,7 +27,7 @@ plink="plink --silent"
 def genSnpMatrix(bfile, mapping):
 	#Generate frequencies
 	print("Generating frequencies with PLINK...")
-	command=plink+" --bfile "+bfile+" --freq --out "+bfile
+	command=plink+" --bfile "+bfile+" --freq --nonfounders --out "+bfile
 	subprocess.run(command,shell=True)
 	freq=pd.read_csv(bfile+".frq",header=0, delim_whitespace=True)
 	ma=freq[["SNP","A1"]]
